@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>room</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="place.css">
+</head>
+<body>
+   <nav>
+      <label class="logo"> <img src="https://www.logolynx.com/images/logolynx/9c/9c0d38dfefbb1a00369d482de4e96c4a.jpeg" alt="Booking"/> </label>
+  
+      <ul>
+          <li><a class="active" href="#">Espanol</a></li>
+          <li><a href="#">List Your property</a></li>
+          <li><a href="#">Supports</a></li>
+          <li><a href="#">Trips</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Sign in</a></li>
+      </ul>
+      </nav>
+      <div id="top">
+         <h1>Get More Bang for Less Buck.</h1>
+         <h6>Eat all the food. Drink all the drinks. Be entertained. Think of nothing beyond having a great time, making a splash in the pool and soaking up sun on the beach. All-inclusive getaways mean you and your family are having all the carefree fun you’ve been dreaming about. Free cancellation on most hotels. Some hotels require you to cancel more than 24 hours before check in. Please check the site for details. Note: International destinations may have travel restrictions in place due to COVID-19. Please check federal, state and local advisories before scheduling trips. </h6>
+      </div>
+    <div id="container"></div>
+    <button id="btn">Show More</button>
+</body>
+</html>
+<script>
+    let product = [
+        {
+        img : "https://images.trvl-media.com/hotels/1000000/30000/21600/21544/95af2b3d_b.jpg",
+        name : "Occidental Tucancun All Inclusive",
+        Place : "Cancun",
+        rate : "3.8/5 (850-Review)",
+        offer : "Fully refundable options",
+        price : 200,
+        day : "per Night",
+      
+     },
+     {  
+        img : "https://images.trvl-media.com/hotels/2000000/1150000/1142000/1141946/c6bb1576_b.jpg",
+        name : "Occean Blue & Sand Beach Resort-All...",
+        Place : "Punta Cana",
+        rate : "3.8/5 (855-Review)",
+        offer : "Fully refundable options",
+        price : 182,
+        day : "per Night",
+        
+
+     },
+     {
+        img : "https://images.trvl-media.com/hotels/28000000/27580000/27573300/27573282/404fc3bf_b.jpg",
+        name : "Impressive Punta Cana-All Inclusive",
+        Place : "Punta Cana",
+        rate : "3.5/5 (855-Review)",
+        offer : "Fully refundable options",
+        price : 112,
+        day : "per Night",
+        
+     },
+     {
+        img : "https://images.trvl-media.com/hotels/1000000/700000/693700/693601/2c1bb597_b.jpg",
+        name : "Occidental Punta Cana-All Inclusive",
+        Place : "Punta Cana",
+        rate : "3.9/5 (855-Review)",
+        offer : "Fully refundable options",
+        price : "144",
+        day : "per Night",
+     },
+     {
+        
+        img : "https://images.trvl-media.com/hotels/1000000/980000/975400/975332/651a177b_b.jpg",
+        name : "Be Live Collection Punta Cana-All Inclusive",
+        Place : "Punta Cana",
+        rate : "3.3/5 (855-Review)",
+        offer : "Fully refundable options",
+        price : 166,
+        day : "per Night",
+     },
+     {
+        img : "https://images.trvl-media.com/hotels/25000000/24370000/24362000/24361944/e4058bd2_b.jpg",
+        name : "The Fives Downtown Hotel",
+        Place : "Playa del Carmen",
+        rate : "4.3/5 (855-Review)",
+        offer : "Fully refundable options",
+        price : 174,
+        day : "per Night",
+
+     },
+     {
+        img : "https://images.trvl-media.com/hotels/1000000/480000/470900/470878/6abe88f3_b.jpg",
+        name : "Riu Lupita All Inclusive",
+        Place : "Playa del Carmen",
+        rate : "3.9/5 (855-Review)",
+        offer : "Fully refundable options",
+        price : 141,
+        day : "per Night",
+     },
+     {
+        img : "https://images.trvl-media.com/hotels/1000000/570000/569300/569232/cc00dc9d_b.jpg",
+        name : "Viva Wyndham Maya All Inclusive",
+        Place : "Playa del Carmen",
+        rate : "3.9/5 (855-Review)",
+        offer : "Fully refundable options",
+        price : 170,
+        day : "per Night",
+     },
+     {
+        img : "https://images.trvl-media.com/hotels/1000000/330000/328200/328185/b35019cd_b.jpg",
+        name : "Allegro Playacar All Inclusive",
+        Place : "Playa del Carmen",
+        rate : "3.9/5 (855-Review)",
+        offer : "Fully refundable options",
+        price : 174,
+        day : "per Night",
+     },
+     {
+        img : "https://images.trvl-media.com/hotels/8000000/7620000/7615700/7615695/62686c5e_b.jpg",
+        name : "Sea Garden Beach Resort All Inclusive",
+        Place : "Montego Bay",
+        rate : "3.8/5 (855-Review)",
+        offer : "Fully refundable options",
+        price : 178,
+        day : "per Night",
+     },
+     {
+        img : "https://images.trvl-media.com/hotels/2000000/1830000/1823100/1823032/4ad6d80e_b.jpg",
+        name : "Ocean Coral & Turquera All Inclusive",
+        Place : "Puerto Morelos",
+        rate : "3.9/5 (855-Review)",
+        offer : "Fully refundable options",
+        price : 183,
+        day : "per Night",
+     },
+     {
+        img : "https://images.trvl-media.com/hotels/11000000/10230000/10226000/10225947/d07f7e3b_b.jpg",
+        name : "El Beso Adults only at Ocean Coral",
+        Place : "Puerto Morelos",
+        rate : "3.8/5 (855-Review)",
+        offer : "Fully refundable options",
+        price : 193,
+        day : "per Night",
+     },
+   {
+      img : "https://images.trvl-media.com/hotels/1000000/20000/16600/16535/2c798ad2_b.jpg",
+        name : "Barcelo Puerto Vallarta-All Inclusive",
+        Place : "Puerto Vallorta",
+        rate : "3.9/5 (855-Review)",
+        offer : "Fully refundable options",
+        price : 193,
+        day : "per Night",
+   },
+   {
+      img : "https://images.trvl-media.com/hotels/1000000/20000/10500/10481/3a24a70d_b.jpg",
+        name : "Buenaventura Grand Hotel",
+        Place : "Puerto Morelos",
+        rate : "4.0/5 (855-Review)",
+        offer : "Fully refundable options",
+        price : 199,
+        day : "per Night",
+   },
+   {
+       img : "https://images.trvl-media.com/hotels/1000000/190000/186000/185902/9c5d5d2f_b.jpg",
+        name : "Vamar Vallarta All Inclusive Marina",
+        Place : "Puerto Morelos",
+        rate : "3.4/5 (855-Review)",
+        offer : "Fully refundable options",
+        price : 151,
+        day : "per Night",
+   }
+     ]
+</script>
+<script>
+   let container= document.getElementById("container");
+
+   function display(data){
+      data.forEach(function(el){
+         let div = document.createElement("div");
+
+         let img = document.createElement("img");
+         img.src = el.img;
+
+         let h2 = document.createElement("h3");
+         h2.innerText = el.name;
+
+         let h3 = document.createElement("h4");
+         h3.innerText = el.Place;
+
+         let p = document.createElement("h5");
+         p.innerText = el.rate;
+
+         let hr = document.createElement("hr");
+
+         let h4 = document.createElement("h2");
+         h4.innerText = el.offer;
+
+         let h1 = document.createElement("h1");
+         h1.innerText = el.price;
+
+         let p1 = document.createElement("p");
+         p1.innerText = el.day;
+
+         let btn = document.createElement("button");
+         btn.innerText = "Book";
+
+         div.append(img,h2,h3,p,hr,h4,h1,p1,btn);
+         container.append(div);
+      })
+   }
+   display (product)
+</script>
