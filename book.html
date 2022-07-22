@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="book.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+    <nav>
+        <label class="logo"> <img src="https://www.logolynx.com/images/logolynx/9c/9c0d38dfefbb1a00369d482de4e96c4a.jpeg" alt="Booking"/> </label>
+    
+        <ul>
+            <li><a class="active" href="index.html">Espanol</a></li>
+            <li><a href="place.html">Resort</a></li>
+            <li><a href="#">Supports</a></li>
+            <li><a href="book.html">Bookings</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign in</a></li>
+        </ul>
+        </nav>
+        <div id="total">
+    <h2>Total Amount :-  <span id="total-value">0</span></h2>
+    <button>Paynow</button>
+     </div>
+    <div id="container"></div>
+</body>
+<script>
+    
+
+     let booking = JSON.parse(localStorage.getItem("book")) || [];
+    
+     let totalprice = document.getElementById("total-value");
+
+    function display(booking){
+       
+      document.getElementById("container").innerHTML="";
+        let total = 0;
+      booking.forEach(function(el,index){
+        total += Number(el.price);
+      let div = document.createElement("div");
+
+      let img = document.createElement("img");
+      img.src = el.img;
+
+      let h2 = document.createElement("h3");
+      h2.innerText = el.name;
+
+      let h3 = document.createElement("h4");
+      h3.innerText = el.Place;
+
+      let p = document.createElement("h5");
+      p.innerText = el.rate;
+
+      let hr = document.createElement("hr");
+
+      let h4 = document.createElement("h2");
+      h4.innerText = el.offer;
+
+      let h1 = document.createElement("h1");
+      h1.innerText = el.price;
+
+      let p1 = document.createElement("p");
+      p1.innerText = el.day;
+
+      let newbtn = document.createElement("button");
+      newbtn.innerText = "Remove";
+      newbtn.addEventListener("click",function(){
+         removetobook(index);
+    
+      });
+      div.append(img,h2,h3,p,hr,h4,h1,p1,newbtn);
+      document.querySelector("#container").append(div);
+      totalprice.innerText=total;
+   });
+   
+    }
+display (booking)
+
+function removetobook(index){
+      booking.splice(index,1);
+      localStorage.setItem("book",JSON.stringify(booking));
+      display(booking)
+   
+}
+let btn = document.querySelector("button");
+btn.addEventListener("click",function(){
+  alert("Booking Successful")
+});
+</script>
+</html>

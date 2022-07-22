@@ -48,7 +48,7 @@
     font-size: 20px;
  }
  h1 {
-   margin-left:80%;
+   margin-left:0%;
    margin-top: -20px;
  }
  button {
@@ -70,7 +70,7 @@
     margin-top: 10px;
  }
  p {
-    margin-left: 80%;
+    margin-left:5%;
     color:#1F7D57;
    font-weight: bold;
  }
@@ -118,6 +118,19 @@
  #container > div:hover{
    padding: 5px;
    border: 1px solid var (--text-color);
-   transition: 0.5s;
+   transition: 0.4s;
+ }
+ #total {
+    border: 3px solid gray;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    margin-top:50px;
+ }
+ #total > button{
+    margin-top: 20px;
+ }
+ span {
+    font-size: 25px;
  }
  

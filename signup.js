@@ -11,6 +11,8 @@ document.getElementById("eye").addEventListener("click",function()
 document.querySelector("form").addEventListener("submit",fill);
 
 let Detail=JSON.parse(localStorage.getItem("data")) || [];
+
+   
      
 function fill(event){ 
     
@@ -20,7 +22,13 @@ function fill(event){
      personemail : document.querySelector("#email").value,
      prpassword : document.querySelector("#password").value
     };
-    if(obj.personname !="" && obj.personemail !="" && obj.prpassword !="" ){ 
+     for(let i=0;i<Detail.length;i++){ 
+        if(Detail[i].personemail===obj.personemail){
+            alert("Already Signup")
+            return;
+        }
+    }
+      if(obj.personname !="" && obj.personemail !=Detail.personemail && obj.prpassword !="" ){ 
            
            alert("Successfully signed up");
             window.location.href ="login.html";

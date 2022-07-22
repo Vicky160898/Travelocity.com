@@ -13,7 +13,8 @@ nav {
     height: 80px;
     width:100%;
     color: white;
-    position: sticky;
+    /* position:fixed;
+    z-index: 100; */
    
 }
 label > img {
@@ -393,8 +394,35 @@ input[type="checkbox"]{
 
 
 @media all and (min-width:481px) and (max-width:768px){
+    #detail {
+        display:grid;
+        /* margin-top: -20px; */
+        grid-template-columns: repeat(2,1fr);
+        gap: 10px;
+    }
+    #book {
+        display: grid;
+        width: 90%;
+        margin: auto;
+        grid-template-columns: repeat(2,400px 450px );
+        gap: 10px;
+    }
 
 }
 @media all and (min-width:320px) and (max-width:480px){
+    #detail {
+        display:grid;
+        /* margin-top: -20px; */
+        grid-template-columns: repeat(2,1fr);
+        gap: 10px;
+    }
+    #book {
+        display: grid;
+        width: 90%;
+        margin: auto;
+        grid-template-columns: repeat(1,400px);
+        gap: 10px;
+    }
+
 
 }
