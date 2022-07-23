@@ -120,4 +120,14 @@
    border: 1px solid var (--text-color);
    transition: 0.5s;
  }
- 
+ #filter {
+   cursor: pointer;
+   padding: 12px;
+   margin-left: 5%;
+   margin-top: 30px;
+   background-color:#FFFFFF ;
+   font-size: 18px;
+   border: none;
+   outline: none;
+   /* background: transparent; */
+ }

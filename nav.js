@@ -11,7 +11,7 @@ form.addEventListener("submit",function(event){
         end :document.querySelector("#date-end").value,
         room :document.querySelector("#room").value
     }
-    if(obj.name == "" || obj.room == "")
+    if(obj.name == "")
     {
         alert("Please select the destination")
     }else

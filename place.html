@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>room</title>
+    <title>Wander Wisely with the Travelocity app</title>
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="place.css">
 </head>
@@ -18,13 +18,22 @@
           <li><a href="#">Supports</a></li>
           <li><a href="book.html">Bookings</a></li>
           <li><a href="login.html">Login</a></li>
-          <li><a href="signup.html">Sign in</a></li>
+          <li><a href="signup.html">Sign up</a></li>
       </ul>
       </nav>
       <div id="top">
          <h1>Get More Bang for Less Buck.</h1>
          <h6>Eat all the food. Drink all the drinks. Be entertained. Think of nothing beyond having a great time, making a splash in the pool and soaking up sun on the beach. All-inclusive getaways mean you and your family are having all the carefree fun you’ve been dreaming about. Free cancellation on most hotels. Some hotels require you to cancel more than 24 hours before check in. Please check the site for details. Note: International destinations may have travel restrictions in place due to COVID-19. Please check federal, state and local advisories before scheduling trips. </h6>
       </div>
+      <select id="filter">
+         <option value="">All Resort</option>
+         <option value="Cancun">Cancun</option>
+         <option value="Punta Cana">Punta Cana</option>
+         <option value="Playa del Carmen">Playa del Carmen</option>
+         <option value="Montego Bay">Montego Bay</option>
+         <option value="Puerto Morelos">Puerto Morelos</option>
+         <option value="Puerto Vallorta">Puerto Vallorta</option>
+      </select>
     <div id="container"></div>
     <button id="btn">Show More</button>
 </body>
@@ -179,7 +188,10 @@
 
    let booking = JSON.parse(localStorage.getItem("book")) || [];
 
+   let filter = document.getElementById("filter");
+
    function display(data){
+      container.innerHTML="";
       data.forEach(function(el){
          let div = document.createElement("div");
 
@@ -233,4 +245,16 @@
       }
 
    }
+   filter.addEventListener("change",function(){
+      if(filter.value === ""){
+         display(product);
+      }else{ 
+      let filtered = product.filter(function(el){
+          return el.Place === filter.value;
+      
+      });
+         display(filtered)
+      }
+      })
+   
 </script>

@@ -74,6 +74,7 @@ section > img {
     position:relative;
     background-size: cover;
     height: 75vh;
+  
 }
 #index {
     width:90%;
@@ -199,7 +200,8 @@ section > img {
 }
 h1 {
     margin-left: 5%;
-    margin-top: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 #bottom > div > img {
     width: 100%;
