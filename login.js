@@ -19,7 +19,7 @@ let Detail=JSON.parse(localStorage.getItem("data")) || [];
             Details1=true;
             localStorage.setItem("final",JSON.stringify(el));
             alert("Succefully Log In");
-            window.location.href="nav.html"
+            window.location.href="index.html"
            
         }
     })
