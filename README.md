@@ -17,6 +17,12 @@
   ## Resort Booking Page :- 
  ![travelocity2](https://user-images.githubusercontent.com/107462150/199272306-1d15c8d0-bd7a-4c9f-a030-e2e9e8145173.png)
 
+ ## Hotel Booking Page :- 
+ ![travelocity2](https://user-images.githubusercontent.com/107462150/207064407-d3fae2f2-71df-45ab-b984-7aa60c859704.png)
+
+ ## Product Page :- 
+ ![travelocity2](https://user-images.githubusercontent.com/107462150/207065233-7f681a4a-4b7a-4554-99f7-efcb1b18d345.png)
+
 
 
   # Deployed Link :-
