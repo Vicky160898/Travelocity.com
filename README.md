@@ -11,7 +11,8 @@
   ## Clone Snaps :-
   
   ## Home Page :- 
- ![travelocity](https://user-images.githubusercontent.com/107462150/207063238-a724b263-3655-4bd4-9f97-7add70a574a9.png)
+ ![travelocity](https://user-images.githubusercontent.com/107462150/207068925-3b5ebb64-34c3-4f98-82d3-cc5f5e4edef9.png)
+
 
  
   ## Resort Booking Page :- 
